@@ -1,0 +1,182 @@
+* {
+	margin: 0;
+  	padding: 0;
+}
+
+html {
+	background-color: white;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+h1 {
+	font-size: 9rem;
+}
+
+h3 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h1, h5 {
+	text-align: justify;
+}
+
+h1, h3, h5, a {
+	color: #707070;
+	font-family: 'Nunito', sans-serif;
+}
+
+.header {
+	background-color: white;
+	text-align: center;
+}
+
+.header a {
+	font-size: 1.25rem;
+	color: #a6a6a6;
+	font-family: 'Nanum Gothic', sans-serif;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: center;
+	border-color: white;
+	border-right-color: white;
+	transition: background-color 0.5s ease-out;
+	/*transition: color 0.2s ease;*/
+	border-radius: 5px;
+}
+
+.header a:hover{
+	background-color: lightgrey;
+	color: white;
+	cursor: pointer;
+}
+
+.grid-boxes{
+	display: grid;
+	grid-template: repeat(4, 700px) 100px / 1fr 1fr;
+	grid-template-areas: "logo logo"
+						 "box1Left box1Right"
+						 "box2Left box2Right"
+						 "box3Left box3Right"
+						 "footer footer"; 
+	justify-content: center;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 15px;
+}
+
+.logo {
+	grid-area: logo;
+	background-color: white;
+	place-self: center;
+}
+
+.logo h1 {
+	margin-top: -40px;
+	/* -webkit-animation: image_blur 2s; */
+} 
+
+.logo h3 {
+	margin-top: -15px;
+	/* -webkit-animation: image_blur 2s; */
+}
+
+.box1Left {
+	grid-area: box1Left;
+}
+
+.box1Right {
+	grid-area: box1Right;
+
+}
+
+.box2Left {
+	grid-area: box2Left;
+}
+
+.box2Right {
+	grid-area: box2Right;
+	margin-right: 40px;
+}
+
+.box3Left {
+	grid-area: box3Left;
+}
+
+.box3Right {
+	grid-area: box3Right;
+}
+
+.footer {
+	grid-area: footer;
+	margin-top: 80px;
+}
+
+.box1Left, .box1Right, .box2Left, .box2Right, 
+.box3Left, .box3Right, .footer {
+	background-color: white;
+	place-self: center;
+}
+
+.footer a {
+	color: #707070;
+	padding-left: 13px;
+	padding-right: 13px;
+	font-size: 1.15rem;
+}
+
+.red {
+	color: #DB4D52; 
+	background-color: white;
+}
+
+.box1Left #macbook {
+	max-height: 700px;
+	max-width: 100%;
+	padding-left: 10px;
+}
+
+.box1Right h5, .box2Left h5, .box3Right h5 {
+	max-width: 70%;
+	margin-left: 110px;
+}
+
+.box2Right #chart {
+	max-height: 700px;
+	max-width: 100%;
+	-webkit-filter: drop-shadow(0px 0px 15px #333);
+	filter: drop-shadow(0px 0px 15px #333);
+}
+
+.box3Left #appleDevices {
+	max-height: 700px;
+	max-width: 100%;
+}
+
+/* animations
+@-webkit-keyframes image_blur {
+    0% { -webkit-filter: blur(10px);}
+	100% { -webkit-filter: blur(0px);}
+}
+
+@-webkit-keyframes background_transition {
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+*/
