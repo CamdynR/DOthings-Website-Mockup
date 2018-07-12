@@ -54,8 +54,7 @@ h1, h3, h5, a {
 	text-align: center;
 	border-color: white;
 	border-right-color: white;
-	transition: background-color 0.5s ease-out;
-	/*transition: color 0.2s ease;*/
+	transition: color 0.15s ease, background-color 0.5s ease-out;
 	border-radius: 5px;
 }
 
