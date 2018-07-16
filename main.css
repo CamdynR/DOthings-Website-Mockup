@@ -33,7 +33,7 @@ h1, h5 {
 	text-align: justify;
 }
 
-h1, h3, h5, a {
+h1, h3, h5, a, button, input {
 	color: #707070;
 	font-family: 'Nunito', sans-serif;
 }
@@ -54,7 +54,8 @@ h1, h3, h5, a {
 	text-align: center;
 	border-color: white;
 	border-right-color: white;
-	transition: color 0.15s ease, background-color 0.5s ease-out;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 	border-radius: 5px;
 }
 
@@ -66,26 +67,159 @@ h1, h3, h5, a {
 
 .grid-boxes{
 	display: grid;
-	grid-template: repeat(4, 700px) 100px / 1fr 1fr;
+	grid-template: 800px 150px 800px 150px 800px 150px 800px 100px / 1fr 1fr;
 	grid-template-areas: "logo logo"
+						 "break1 break1"
 						 "box1Left box1Right"
+						 "break2 break2"
 						 "box2Left box2Right"
+						 "break3 break3"
 						 "box3Left box3Right"
 						 "footer footer"; 
 	justify-content: center;
-	padding-left: 30px;
-	padding-right: 30px;
 	padding-bottom: 15px;
+}
+
+.break1 {
+	grid-area: break1;
+}
+
+.break2 {
+	grid-area: break2;
+}
+
+.break3 {
+	grid-area: break3;
+}
+
+.break1, .break2, .break3 {
+	background-color: #DB4D52;
+}
+
+.break1 h3 {
+	margin-top: 20px;
+}
+
+.break2 h3 {
+	margin-top: 35px;
+	line-height: 2.5rem;
+}
+
+.break3 h3 {
+	margin-top: 20px;
+}
+
+.break1 h3, .break2 h3, .break3 h3 {
+	color: white;
+	place-self: center;
+}
+
+.break1 button {
+	background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: #707070;
+    font-size: 1.3rem;
+    padding: 15px 32px;
+    position: relative;
+    left: 50%;
+    margin-left: -85px;
+    text-decoration: none;
+    display: inline-block;
+    width: 170px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.break1 button:hover {
+	background-color: #e99598;
+    color: white;
+}
+
+.email_field input[type=text] {
+	position: relative;
+	font-size: 1.4rem;
+	left: 50%;
+	width: 430px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: -280px;
+	box-sizing: border-box;
+	border-left: 8px solid white;
+	border-right: 8px solid white;
+	border-top: 4px solid white;
+	border-bottom: 4px solid white;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	background-image: url('./images/mail.png');
+	background-position: 5px; 
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    padding-left: 45px;
+    padding-right: 5px;
+}
+
+/*Clearing Floats*/
+.email_field:before, .email_field:after {
+    content:"";
+    display:table;
+}
+
+.email_field:after {
+    clear:both;
+}
+
+.email_field {
+    zoom:1;
+} 
+
+.email_field button {
+	position: relative;
+	left: 50%;
+	margin-left: -4px;
+	background-color: white;
+	color: #707070;
+	font-size: 1.4rem;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	height: 40px;
+	width: 120px; 
+	border-left: 1.5px solid #bfbfbf;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 0;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.email_field button:hover {
+	background-color: #e99598;
+    color: white;
+}
+
+/*Placeholder Text*/
+::placeholder {
+   color: #bfbfbf;
+}
+
+:-moz-placeholder {
+	color: #bfbfbf;
+}
+
+:-ms-input-placeholder {
+	color: #bfbfbf;
 }
 
 .logo {
 	grid-area: logo;
 	background-color: white;
 	place-self: center;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .logo h1 {
-	margin-top: -40px;
+	margin-top: -130px;
 	/* -webkit-animation: image_blur 2s; */
 } 
 
@@ -129,6 +263,8 @@ h1, h3, h5, a {
 .box3Left, .box3Right, .footer {
 	background-color: white;
 	place-self: center;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .footer a {
