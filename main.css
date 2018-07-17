@@ -1,3 +1,7 @@
+/*This CSS document is organized starting from the 
+  top/most general part of the web-page to the bottom*/
+
+/*General Attributes*/
 * {
 	margin: 0;
   	padding: 0;
@@ -38,25 +42,26 @@ h1, h3, h5, a, button, input {
 	font-family: 'Nunito', sans-serif;
 }
 
+/*Header - Links at the top of the page*/
 .header {
 	background-color: white;
 	text-align: center;
 }
 
 .header a {
-	font-size: 1.25rem;
+	border-color: white;
+	border-radius: 5px;
+	border-right-color: white;
 	color: #a6a6a6;
+	font-size: 1.25rem;
 	font-family: 'Nanum Gothic', sans-serif;
+	padding-bottom: 8px;
 	padding-left: 60px;
 	padding-right: 60px;
 	padding-top: 8px;
-	padding-bottom: 8px;
 	text-align: center;
-	border-color: white;
-	border-right-color: white;
+	transition-duration: 0.4s;
 	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-	border-radius: 5px;
 }
 
 .header a:hover{
@@ -65,6 +70,7 @@ h1, h3, h5, a, button, input {
 	cursor: pointer;
 }
 
+/*Organized webpage using grid instead of box-model*/
 .grid-boxes{
 	display: grid;
 	grid-template: 800px 150px 800px 150px 800px 150px 800px 100px / 1fr 1fr;
@@ -80,33 +86,36 @@ h1, h3, h5, a, button, input {
 	padding-bottom: 15px;
 }
 
+/*DOthings logo and subtitle*/
+.logo {
+	background-color: white;
+	grid-area: logo;
+	padding-left: 30px;
+	padding-right: 30px;
+	place-self: center;
+}
+
+.logo h1 {
+	margin-top: -130px;
+	/* -webkit-animation: image_blur 2s; */
+} 
+
+.logo h3 {
+	margin-top: -15px;
+	/* -webkit-animation: image_blur 2s; */
+}
+
+/*First break - Red bar across page with button*/
 .break1 {
 	grid-area: break1;
-}
-
-.break2 {
-	grid-area: break2;
-}
-
-.break3 {
-	grid-area: break3;
-}
-
-.break1, .break2, .break3 {
-	background-color: #DB4D52;
 }
 
 .break1 h3 {
 	margin-top: 20px;
 }
 
-.break2 h3 {
-	margin-top: 35px;
-	line-height: 2.5rem;
-}
-
-.break3 h3 {
-	margin-top: 20px;
+.break1, .break2, .break3 {
+	background-color: #DB4D52;
 }
 
 .break1 h3, .break2 h3, .break3 h3 {
@@ -114,21 +123,22 @@ h1, h3, h5, a, button, input {
 	place-self: center;
 }
 
+/*Button for the first break*/
 .break1 button {
 	background-color: white;
     border: none;
     border-radius: 5px;
     color: #707070;
+    display: inline-block;
     font-size: 1.3rem;
-    padding: 15px 32px;
-    position: relative;
     left: 50%;
     margin-left: -85px;
+    padding: 15px 32px;
+    position: relative;
     text-decoration: none;
-    display: inline-block;
+    transition-duration: 0.4s;
     width: 170px;
     -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
 }
 
 .break1 button:hover {
@@ -136,30 +146,110 @@ h1, h3, h5, a, button, input {
     color: white;
 }
 
+/*Box 1 Left -> Picture of Macbook*/
+.box1Left {
+	grid-area: box1Left;
+}
+
+.box1Left #macbook {
+	max-height: 700px;
+	max-width: 100%;
+	padding-left: 10px;
+}
+
+.box1Left, .box1Right, .box2Left, .box2Right, 
+.box3Left, .box3Right, .footer {
+	background-color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+	place-self: center;
+}
+
+/*Box 1 Right -> Text about Macbook Picture*/
+.box1Right {
+	grid-area: box1Right;
+}
+
+.box1Right h5, .box2Left h5, .box3Right h5 {
+	margin-left: 110px;
+	max-width: 70%;
+}
+
+/*Break 2 - Similar to break 1, but without a button*/
+.break2 {
+	grid-area: break2;
+}
+
+.break2 h3 {
+	margin-top: 35px;
+	line-height: 2.5rem;
+}
+
+/*Box 2 Left - Text about picture of chart on right*/
+.box2Left {
+	grid-area: box2Left;
+}
+
+/*Box 2 Right - Picture of Chart*/
+.box2Right {
+	grid-area: box2Right;
+	margin-right: 40px;
+}
+
+.box2Right #chart {
+	filter: drop-shadow(0px 0px 15px #333);
+	max-height: 700px;
+	max-width: 100%;
+	-webkit-filter: drop-shadow(0px 0px 15px #333);
+}
+
+/*Break 3 - Similar to other breaks, includes email field and submit button*/
+.break3 {
+	grid-area: break3;
+}
+
+.break3 h3 {
+	margin-top: 20px;
+}
+
+/*Input field of the email button for the 3rd break*/
 .email_field input[type=text] {
-	position: relative;
-	font-size: 1.4rem;
-	left: 50%;
-	width: 430px;
-	height: 40px;
-	margin-top: 10px;
-	margin-left: -280px;
-	box-sizing: border-box;
-	border-left: 8px solid white;
-	border-right: 8px solid white;
-	border-top: 4px solid white;
-	border-bottom: 4px solid white;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
 	background-image: url('./images/mail.png');
 	background-position: 5px; 
     background-repeat: no-repeat;
     background-size: 32px 32px;
-    padding-left: 45px;
+    border-bottom: 4px solid white;
+	border-bottom-left-radius: 8px;
+	border-left: 8px solid white;
+	border-right: 8px solid white;
+	border-top: 4px solid white;
+	border-top-left-radius: 8px;
+	box-sizing: border-box;
+	font-size: 1.4rem;
+	height: 40px;
+	left: 50%;
+	margin-left: -280px;
+	margin-top: 10px;
+	padding-left: 45px;
     padding-right: 5px;
+	position: relative;
+	width: 430px;
 }
 
-/*Clearing Floats*/
+/*Placeholder Text for the email field in 3rd break*/
+::placeholder {
+	color: #bfbfbf;
+}
+
+:-moz-placeholder {
+	color: #bfbfbf;
+}
+
+:-ms-input-placeholder {
+	color: #bfbfbf;
+}
+
+/*Clearing Floats for the email input field*/
 .email_field:before, .email_field:after {
     content:"";
     display:table;
@@ -173,23 +263,24 @@ h1, h3, h5, a, button, input {
     zoom:1;
 } 
 
+/*Submit button for the email input field in 3rd break*/
 .email_field button {
-	position: relative;
-	left: 50%;
-	margin-left: -4px;
 	background-color: white;
-	color: #707070;
-	font-size: 1.4rem;
-	border-top-right-radius: 8px;
+	border-bottom: 0;
 	border-bottom-right-radius: 8px;
-	height: 40px;
-	width: 120px; 
 	border-left: 1.5px solid #bfbfbf;
 	border-right: 0;
 	border-top: 0;
-	border-bottom: 0;
+	border-top-right-radius: 8px;
+	color: #707070;
+	font-size: 1.4rem;
+	height: 40px;
+	left: 50%;
+	margin-left: -4px;
+	position: relative;
+	transition-duration: 0.4s;
+	width: 120px; ;
 	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
 }
 
 .email_field button:hover {
@@ -197,104 +288,9 @@ h1, h3, h5, a, button, input {
     color: white;
 }
 
-/*Placeholder Text*/
-::placeholder {
-   color: #bfbfbf;
-}
-
-:-moz-placeholder {
-	color: #bfbfbf;
-}
-
-:-ms-input-placeholder {
-	color: #bfbfbf;
-}
-
-.logo {
-	grid-area: logo;
-	background-color: white;
-	place-self: center;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.logo h1 {
-	margin-top: -130px;
-	/* -webkit-animation: image_blur 2s; */
-} 
-
-.logo h3 {
-	margin-top: -15px;
-	/* -webkit-animation: image_blur 2s; */
-}
-
-.box1Left {
-	grid-area: box1Left;
-}
-
-.box1Right {
-	grid-area: box1Right;
-
-}
-
-.box2Left {
-	grid-area: box2Left;
-}
-
-.box2Right {
-	grid-area: box2Right;
-	margin-right: 40px;
-}
-
+/*Box 3 Left - Picture of Apple device family*/
 .box3Left {
 	grid-area: box3Left;
-}
-
-.box3Right {
-	grid-area: box3Right;
-}
-
-.footer {
-	grid-area: footer;
-	margin-top: 80px;
-}
-
-.box1Left, .box1Right, .box2Left, .box2Right, 
-.box3Left, .box3Right, .footer {
-	background-color: white;
-	place-self: center;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.footer a {
-	color: #707070;
-	padding-left: 13px;
-	padding-right: 13px;
-	font-size: 1.15rem;
-}
-
-.red {
-	color: #DB4D52; 
-	background-color: white;
-}
-
-.box1Left #macbook {
-	max-height: 700px;
-	max-width: 100%;
-	padding-left: 10px;
-}
-
-.box1Right h5, .box2Left h5, .box3Right h5 {
-	max-width: 70%;
-	margin-left: 110px;
-}
-
-.box2Right #chart {
-	max-height: 700px;
-	max-width: 100%;
-	-webkit-filter: drop-shadow(0px 0px 15px #333);
-	filter: drop-shadow(0px 0px 15px #333);
 }
 
 .box3Left #appleDevices {
@@ -302,7 +298,31 @@ h1, h3, h5, a, button, input {
 	max-width: 100%;
 }
 
-/* animations
+/*Box 3 Right - Text about picture of Apple device family*/
+.box3Right {
+	grid-area: box3Right;
+}
+
+/*Footer - Links at the bottom of the page*/
+.footer {
+	grid-area: footer;
+	margin-top: 80px;
+}
+
+.footer a {
+	color: #707070;
+	font-size: 1.15rem;
+	padding-left: 13px;
+	padding-right: 13px;
+}
+
+/*Any text marked with the red class gets applied with this*/
+.red {
+	background-color: white;
+	color: #DB4D52; 
+}
+
+/* Animations - Decided not to use these, might use them later
 @-webkit-keyframes image_blur {
     0% { -webkit-filter: blur(10px);}
 	100% { -webkit-filter: blur(0px);}
