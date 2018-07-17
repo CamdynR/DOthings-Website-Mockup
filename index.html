@@ -8,18 +8,23 @@
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 </head>
 <body>
+	<!-- Links at top of page -->
 	<div class="header">
 		<a href="http://google.com" target="_blank" class="trynow">TRY NOW</a>
 		<a href="http://google.com" target="_blank" class="pricing">PRICING</a>
 		<a href="http://google.com" target="_blank" class="about">ABOUT</a>
-		<a href="http://google.com" target="_blank" class="login">LOGIN</a>
-		<a href="http://google.com" target="_blank" class="signup">SIGN UP</a>
+		<a href="./login/login.html" class="login">LOGIN</a>
+		<a href="#emailSignUp" class="signup">SIGN UP</a>
 	</div>
+
 	<ul class="grid-boxes">
+		<!-- Main DOthings logo -->
 		<li class="logo">
 			<h1><mark class="red">DO</mark>things</h1>
 			<h3>Lorem ipsum dolor sit amet</h3>
 		</li>
+
+		<!-- 1st Break, includes button -->
 		<li class="break1">
 			<h3>Ut enim ad minim veniam!</h3>
 			<button type="button" onclick="window.open(
@@ -27,37 +32,55 @@
   								  '_blank'
   								  )">Duis aut</button>
 		</li>
+
+		<!-- Image of Macbook with DOthings app open -->
 		<li class="box1Left">
 			<img id="macbook" src="./images/macbook.jpg">
 		</li>
+
+		<!-- Description of Macbook with app open -->
 		<li class="box1Right">
 			<h3 class="red">HEADLINE</h3>
 			<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
 		</li>
+
+		<!-- 2nd Break, just text -->
 		<li class="break2">
 			<h3>Lorem ipsum dolor sit amet<br>consectetur adipiscing</h3>
 		</li>
+
+		<!-- Description of DOthings chart on right -->
 		<li class="box2Left">
 			<h3 class="red">HEADLINE</h3>
 			<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
 		</li>
+
+		<!-- Image of DOthings chart -->
 		<li class="box2Right">
 			<img id="chart" src="./images/chartNew.png">
 		</li>
-		<li class="break3">
+
+		<!-- 3rd Break, includes email entry sign up field -->
+		<li class="break3" id="emailSignUp">
 			<h3>Velit esse cillum</h3>
 			<form class="email_field">
-				<input type="text" name="email" placeholder="email">
+				<input type="text" name="email" placeholder="E-mail">
 				<button type="submit" class="submit">Submit</button>
 			</form>
 		</li>
+
+		<!-- Image of multiple Apple Devices with DOthings app open -->
 		<li class="box3Left">
 			<img id="appleDevices" src="./images/appleDevices.png">
 		</li>
+
+		<!-- Description of picture of multiple Apple Devices with DOthings app open -->
 		<li class="box3Right">
 			<h3 class="red">HEADLINE</h3>
 			<h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
 		</li>
+
+		<!-- Links at the bottom of the page -->
 		<li class="footer">
 			<a href="http://www.google.com">Contact us</a>
 		    <a href="http://www.google.com"">Privacy & Cookies</a>

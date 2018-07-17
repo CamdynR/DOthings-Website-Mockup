@@ -262,6 +262,10 @@ a.signup:hover {
 	width: 430px;
 }
 
+.email_field input[type=text]:focus {
+	outline: none;
+}
+
 /*Placeholder Text for the email field in 3rd break*/
 ::placeholder {
 	color: #bfbfbf;
