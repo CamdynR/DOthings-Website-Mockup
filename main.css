@@ -45,12 +45,13 @@ h1, h3, h5, a, button, input {
 /*Header - Links at the top of the page*/
 .header {
 	background-color: white;
+	margin-top: 15px;
 	text-align: center;
 }
 
 .header a {
 	border-color: white;
-	border-radius: 5px;
+	border-radius: 10px;
 	border-right-color: white;
 	color: #a6a6a6;
 	font-size: 1.25rem;
@@ -65,15 +66,39 @@ h1, h3, h5, a, button, input {
 }
 
 .header a:hover{
-	background-color: lightgrey;
+	background-color: #707070;
+	border-color: #707070;
 	color: white;
 	cursor: pointer;
+}
+
+a.login {
+	border: 2px solid #e99598;
+	color: #e99598;
+}
+
+a.login:hover {
+	background-color: #DB4D52;
+	border-color: #DB4D52;
+	color: white;
+}
+
+a.signup {
+	background-color: #e99598;
+	border: 2px solid #e99598;
+	color: white;
+}
+
+a.signup:hover {
+	background-color: #DB4D52;
+	border-color: #DB4D52;
+	color: white;;
 }
 
 /*Organized webpage using grid instead of box-model*/
 .grid-boxes{
 	display: grid;
-	grid-template: 800px 150px 800px 150px 800px 150px 800px 100px / 1fr 1fr;
+	grid-template: 800px 150px 1000px 150px 1000px 150px 800px 100px / 1fr 1fr;
 	grid-template-areas: "logo logo"
 						 "break1 break1"
 						 "box1Left box1Right"
@@ -269,7 +294,7 @@ h1, h3, h5, a, button, input {
 	background-color: white;
 	border-bottom: 0;
 	border-bottom-right-radius: 8px;
-	border-left: 1.5px solid #bfbfbf;
+	border-left: 1.5px solid #e99598;
 	border-right: 0;
 	border-top: 0;
 	border-top-right-radius: 8px;
