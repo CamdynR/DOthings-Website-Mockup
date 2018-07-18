@@ -172,6 +172,10 @@ a.sign_up:hover {
     color: white;
 }
 
+.break1 button:focus {
+	outline: none;
+}
+
 /*Box 1 Left -> Picture of Macbook*/
 .box1_left {
 	grid-area: box1Left;
@@ -344,7 +348,7 @@ a.sign_up:hover {
 /*Footer - Links at the bottom of the page*/
 .footer {
 	grid-area: footer;
-	margin-top: 400px;
+	margin-top: 500px;
 	margin-bottom: 15px;
 }
 

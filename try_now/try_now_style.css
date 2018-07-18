@@ -1,0 +1,35 @@
+/*This CSS document is organized starting from the 
+  top/most general part of the web-page to the bottom*/
+
+/*General Attributes*/
+* {
+	margin: 0;
+  	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a, h1, h3, h5, {
+	color: #707070;
+	font-family: 'Nunito', sans-serif;
+}
+
+html {
+	background-color: white;
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+}
+
+.temp_div {
+	height: 100%;
+	width: 100%;
+}
+
+.temp {
+	color: #707070;
+	font-size: 3rem;
+	display: table;
+    margin: 0 auto;
+}
