@@ -7,21 +7,26 @@
   	padding: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
+a, button, h1, h3, h5, input {
+	color: #707070;
+	font-family: 'Nunito', sans-serif;
+}
+
 html {
 	background-color: white;
 	font-size: 16px;
 }
 
-a {
-	text-decoration: none;
-}
-
-ul {
-	list-style-type: none;
-}
-
 h1 {
 	font-size: 9rem;
+}
+
+h1, h5 {
+	text-align: justify;
 }
 
 h3 {
@@ -33,13 +38,8 @@ h5 {
 	font-size: 1.2rem;
 }
 
-h1, h5 {
-	text-align: justify;
-}
-
-h1, h3, h5, a, button, input {
-	color: #707070;
-	font-family: 'Nunito', sans-serif;
+ul {
+	list-style-type: none;
 }
 
 /*Header - Links at the top of the page*/
@@ -54,8 +54,8 @@ h1, h3, h5, a, button, input {
 	border-radius: 10px;
 	border-right-color: white;
 	color: #a6a6a6;
-	font-size: 1.25rem;
 	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 1.25rem;
 	padding-bottom: 8px;
 	padding-left: 60px;
 	padding-right: 60px;
@@ -83,22 +83,22 @@ a.login:hover {
 	color: white;
 }
 
-a.signup {
+a.sign_up {
 	background-color: #e99598;
 	border: 2px solid #e99598;
 	color: white;
 }
 
-a.signup:hover {
+a.sign_up:hover {
 	background-color: #DB4D52;
 	border-color: #DB4D52;
 	color: white;;
 }
 
 /*Organized webpage using grid instead of box-model*/
-.grid-boxes{
+.grid_boxes{
 	display: grid;
-	grid-template: 800px 150px 1000px 150px 1000px 150px 800px 100px / 1fr 1fr;
+	grid-template: 800px 150px 1000px 150px 1000px 150px 675px 100px / 1fr 1fr;
 	grid-template-areas: "logo logo"
 						 "break1 break1"
 						 "box1Left box1Right"
@@ -173,30 +173,34 @@ a.signup:hover {
 }
 
 /*Box 1 Left -> Picture of Macbook*/
-.box1Left {
+.box1_left {
 	grid-area: box1Left;
 }
 
-.box1Left #macbook {
+.box1_left #macbook {
 	max-height: 700px;
 	max-width: 100%;
 	padding-left: 10px;
 }
 
-.box1Left, .box1Right, .box2Left, .box2Right, 
-.box3Left, .box3Right, .footer {
-	background-color: white;
-	padding-left: 30px;
-	padding-right: 30px;
+.box1_left, .box1_right, .box2_left, .box2_right, 
+.footer {
 	place-self: center;
 }
 
+.box1_left, .box1_right, .box2_left, .box2_right, 
+.box3_left, .box3_right, .footer {
+	background-color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
 /*Box 1 Right -> Text about Macbook Picture*/
-.box1Right {
+.box1_right {
 	grid-area: box1Right;
 }
 
-.box1Right h5, .box2Left h5, .box3Right h5 {
+.box1_right h5, .box2_left h5, .box3_right h5 {
 	margin-left: 110px;
 	max-width: 70%;
 }
@@ -207,22 +211,22 @@ a.signup:hover {
 }
 
 .break2 h3 {
-	margin-top: 35px;
 	line-height: 2.5rem;
+	margin-top: 35px;
 }
 
 /*Box 2 Left - Text about picture of chart on right*/
-.box2Left {
+.box2_left {
 	grid-area: box2Left;
 }
 
 /*Box 2 Right - Picture of Chart*/
-.box2Right {
+.box2_right {
 	grid-area: box2Right;
 	margin-right: 40px;
 }
 
-.box2Right #chart {
+.box2_right #chart {
 	filter: drop-shadow(0px 0px 15px #333);
 	max-height: 700px;
 	max-width: 100%;
@@ -319,24 +323,29 @@ a.signup:hover {
 }
 
 /*Box 3 Left - Picture of Apple device family*/
-.box3Left {
+.box3_left {
 	grid-area: box3Left;
 }
 
-.box3Left #appleDevices {
+.box3_left #apple_devices {
 	max-height: 700px;
 	max-width: 100%;
 }
 
+.box3_left, .box3_right {
+	place-self: end center;
+}
+
 /*Box 3 Right - Text about picture of Apple device family*/
-.box3Right {
+.box3_right {
 	grid-area: box3Right;
 }
 
 /*Footer - Links at the bottom of the page*/
 .footer {
 	grid-area: footer;
-	margin-top: 80px;
+	margin-top: 400px;
+	margin-bottom: 15px;
 }
 
 .footer a {

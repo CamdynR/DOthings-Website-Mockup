@@ -1,0 +1,229 @@
+/*This CSS document is organized starting from the 
+  top/most general part of the web-page to the bottom*/
+
+/*General Attributes*/
+* {
+	margin: 0;
+  	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	background-color: white;
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+}
+
+/*This is the parent div to help center login box*/
+.login_screen {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+/*Login box div*/
+.login_box {
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	height: 600px;
+	left: 50%;
+	margin-left: -275px;
+	margin-top: -300px;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	width: 550px;
+}
+
+/*Main logo in login box*/
+.login_box h1 {
+	background-color: transparent;
+	color: #707070;
+	font-size: 3rem;
+	margin-top: 60px;
+}
+
+/*Email entry field*/
+.email_field input {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    color: #707070;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 350px;
+}
+
+.email_field input:focus {
+	border: 1px solid #DB4D52;
+	border-radius: 5px;
+	outline: none;
+}
+
+/*Password entry field*/
+.password_field input {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    color: #707070;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 350px;
+}
+
+.password_field input:focus {
+	outline: none;
+	border: 1px solid #DB4D52;
+	border-radius: 5px;
+}
+
+/*Placeholder text for entry boxes*/
+::placeholder {
+	color: #b3b3b3;
+}
+
+:-moz-placeholder {
+	color: #b3b3b3;
+}
+
+:-ms-input-placeholder {
+	color: #b3b3b3;
+}
+
+/*Clearing the floats after submission*/
+.email_field:before, .email_field:after, .password_field:before, 
+.password_field:after {
+    content:"";
+    display:table;
+}
+
+.email_field:after, .password_field:after {
+    clear:both;
+}
+
+.email_field, .password_field {
+    zoom:1;
+} 
+
+/*Remember Me button*/
+.remember_me {
+	color: #707070;
+	float: left;
+	margin-left: 95px;
+	margin-top: 25px;
+	position: relative;
+}
+
+/*Forgot Password Button*/
+.forgot_pass {
+	color: #DB4D52;
+	float: right;
+	margin-right: 95px;
+	margin-top: 25px;
+	position: relative;
+}
+
+.forgot_pass:hover {
+	color: #DB4D52;
+	text-decoration: underline;
+}
+
+/*Login Button*/
+.login_button {
+	background-color: #DB4D52;
+	border-radius: 5px;
+	color: white;
+	margin-left: -177px;
+	margin-top: 67px;
+	padding-bottom: 11px;
+	padding-left: 161px;
+	padding-right: 161px;
+	padding-top: 11px;
+	position: absolute;
+}
+
+.login_button:hover {
+	background-color: #d84146;
+	border-radius: 5px;
+	color: white;
+}
+
+/*"OR" line break*/
+.login_box h3 {
+	color: #b3b3b3;
+	margin-top: 130px;
+	position: relative;
+}
+
+#line_left {
+	background-color: lightgrey;
+	height: 1.25px;
+	left: 50%;
+	margin-left: -160px;
+	margin-top: -13.5px;
+	position: relative;
+	width: 125px;
+}
+
+#line_right {
+	background-color: lightgrey;
+	height: 1.25px;
+	left: 50%;
+	margin-left: 35px;
+	margin-top: -1.25px;
+	position: relative;
+	width: 125px;
+}
+
+/*Facebook login button*/
+.facebook_login {
+	background-color: #3b5998;
+	background-image: url(../images/facebookLogo.png);
+	background-position: 10px; 
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+	border-radius: 5px;
+	color: white;
+	margin-left: -181px;
+	margin-top: 31px;
+	padding-bottom: 11px;
+	padding-left: 102.5px;
+	padding-right: 102.5px;
+	padding-top: 11px;
+	position: absolute;
+}
+
+.facebook_login:hover {
+	background-color: hsl(221, 44%, 38%);
+	border-radius: 5px;
+	color: white;
+}
+
+/*Sign up for new account text & button*/
+.new_account {
+	color: #b3b3b3;
+	font-weight: 300;
+	margin-top: 130px;
+	position: relative;
+}
+
+.new_account a {
+	color: #DB4D52;
+}
+
+.new_account a:hover {
+	text-decoration: underline;
+}
+
+/*Any text marked with the red class gets applied with this*/
+.red {
+	background-color: transparent;
+	color: #DB4D52;
+}

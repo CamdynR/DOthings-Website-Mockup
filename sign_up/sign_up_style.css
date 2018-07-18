@@ -17,29 +17,29 @@ html {
 	font-size: 16px;
 }
 
-/*This is the parent div to help center login box*/
-.loginScreen {
+/*This is the parent div to help center sign up box*/
+.sign_up_screen {
 	height: 100%;
 	position: absolute;
 	width: 100%;
 }
 
-/*Login box div*/
-.loginBox {
+/*Sign up box div*/
+.sign_up_box {
 	border: 2px solid lightgrey;
 	border-radius: 10px;
-	height: 600px;
+	height: 500px;
 	left: 50%;
 	margin-left: -275px;
-	margin-top: -300px;
+	margin-top: -250px;
 	position: relative;
 	text-align: center;
 	top: 50%;
 	width: 550px;
 }
 
-/*Main logo in login box*/
-.loginBox h1 {
+/*Main logo in sign up box*/
+.sign_up_box h1 {
 	background-color: transparent;
 	color: #707070;
 	font-size: 3rem;
@@ -47,7 +47,7 @@ html {
 }
 
 /*Email entry field*/
-.emailField input {
+.email_field input {
     border: 1px solid lightgrey;
     border-radius: 5px;
     color: #707070;
@@ -59,32 +59,13 @@ html {
     width: 350px;
 }
 
-.emailField input:focus {
+.email_field input:focus {
 	border: 1px solid #DB4D52;
 	border-radius: 5px;
 	outline: none;
 }
 
-/*Password entry field*/
-.passwordField input {
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    color: #707070;
-    font-size: 1.2rem;
-    margin-top: 25px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-    width: 350px;
-}
-
-.passwordField input:focus {
-	outline: none;
-	border: 1px solid #DB4D52;
-	border-radius: 5px;
-}
-
-/*Placeholder text for entry boxes*/
+/*Placeholder text for entry box*/
 ::placeholder {
 	color: #b3b3b3;
 }
@@ -98,81 +79,57 @@ html {
 }
 
 /*Clearing the floats after submission*/
-.emailField:before, .emailField:after, .passwordField:before, 
-.passwordField:after {
+.email_field:before, .email_field:after {
     content:"";
     display:table;
 }
 
-.emailField:after, .passwordField:after {
+.email_field:after {
     clear:both;
 }
 
-.emailField, .passwordField {
+.email_field {
     zoom:1;
 } 
 
-/*Remember Me button*/
-.rememberMe {
-	color: #707070;
-	float: left;
-	margin-left: 95px;
-	margin-top: 25px;
-	position: relative;
-}
-
-/*Forgot Password Button*/
-.forgotPass {
-	color: #DB4D52;
-	float: right;
-	margin-right: 95px;
-	margin-top: 25px;
-	position: relative;
-}
-
-.forgotPass:hover {
-	color: #DB4D52;
-	text-decoration: underline;
-}
-
-/*Login Button*/
-.loginButton {
+/*Sign up Button*/
+.sign_up_button {
 	background-color: #DB4D52;
 	border-radius: 5px;
 	color: white;
-	margin-left: -177px;
-	margin-top: 67px;
+	margin-left: -181px;
+	margin-top: 30px;
 	padding-bottom: 11px;
-	padding-left: 161px;
-	padding-right: 161px;
+	padding-left: 152.25px;
+	padding-right: 152.25px;
 	padding-top: 11px;
 	position: absolute;
 }
 
-.loginButton:hover {
+.sign_up_button:hover {
 	background-color: #d84146;
 	border-radius: 5px;
 	color: white;
 }
 
 /*"OR" line break*/
-.loginBox h3 {
+.sign_up_box h3 {
 	color: #b3b3b3;
-	margin-top: 130px;
+	margin-top: 88.5px;
 	position: relative;
 }
 
-#lineLeft {
+#line_left {
 	background-color: lightgrey;
 	height: 1.25px;
 	left: 50%;
-	position: relative;
 	margin-left: -160px;
 	margin-top: -13.5px;
+	position: relative;
 	width: 125px;
 }
 
-#lineRight {
+#line_right {
 	background-color: lightgrey;
 	height: 1.25px;
 	left: 50%;
@@ -182,8 +139,8 @@ html {
 	width: 125px;
 }
 
-/*Facebook login button*/
-.facebookLogin {
+/*Facebook sign up button*/
+.facebook_sign_up {
 	background-color: #3b5998;
 	background-image: url(../images/facebookLogo.png);
 	background-position: 10px; 
@@ -194,31 +151,31 @@ html {
 	margin-left: -181px;
 	margin-top: 31px;
 	padding-bottom: 11px;
-	padding-left: 102.5px;
-	padding-right: 102.5px;
+	padding-left: 99.5px;
+	padding-right: 99.5px;
 	padding-top: 11px;
 	position: absolute;
 }
 
-.facebookLogin:hover {
+.facebook_sign_up:hover {
 	background-color: hsl(221, 44%, 38%);
 	border-radius: 5px;
 	color: white;
 }
 
-/*Sign up for new account text & button*/
-.newAccount {
+/*Login to pre-exsiting account text & button*/
+.old_account {
 	color: #b3b3b3;
 	font-weight: 300;
-	margin-top: 130px;
+	margin-top: 141px;
 	position: relative;
 }
 
-.newAccount a {
+.old_account a {
 	color: #DB4D52;
 }
 
-.newAccount a:hover {
+.old_account a:hover {
 	text-decoration: underline;
 }
 
