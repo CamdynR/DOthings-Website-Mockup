@@ -8,6 +8,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 </head>
 <body>
+
+	<!-- White background for header -->
+	<div class="header-background"></div>
+
 	<!-- Links at top of page -->
 	<div class="header">
 		<a href="./try_now/try_now.html" class="trynow">TRY NOW</a>
@@ -16,6 +20,18 @@
 		<a href="./login/login.html" class="login">LOGIN</a>
 		<a href="./sign_up/sign_up.html" class="sign_up">SIGN UP</a>
 	</div>
+
+	<!-- Hides shadow until user scrolls -->
+	<div class="hide-shadow"></div>
+
+	<!-- Collapses links above for smaller screens into small menu -->
+	<a href="https://www.google.com">
+		<div class="menu">
+			<div id="topBar"></div>
+			<div id="middleBar"></div>
+			<div id="bottomBar"></div>
+		</div>
+	</a>
 
 	<ul class="grid_boxes">
 		<!-- Main DOthings logo -->
