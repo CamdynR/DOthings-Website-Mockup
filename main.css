@@ -42,7 +42,7 @@ ul {
 	list-style-type: none;
 }
 
-/*Background for the header*/
+/*Background for the header bar*/
 .header-background {
 	background-color: white;
 	filter: drop-shadow(0px 0px 6px #666);
@@ -52,6 +52,35 @@ ul {
 	width: 100%;
 	z-index: 997;
 	-webkit-filter: drop-shadow(0px 0px 6px #666);
+}
+
+/*Logo in the top left of header bar*/
+.header-logo {
+	background-color: clear;
+	height: 40px;
+	left: 20px;
+	position: fixed;
+	top: 5px;
+	width: 80px;
+	z-index: 998;
+}
+
+/*Styling for the logo above*/
+.header-logo a {
+	font-size: 2rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+/*Hides logo until user starts scrolling*/
+.hide-header-logo {
+	background-color: white;
+	height: 55px;
+	left: 10px;
+	position: absolute;
+	top: 10px;
+	width: 150px;
+	z-index: 999;
 }
 
 /*Hides header shadow until user scrolls*/
