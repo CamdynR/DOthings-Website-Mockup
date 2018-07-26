@@ -93,6 +93,34 @@ ul {
 	z-index: 998;
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1375px) {
+	.header-logo {
+		background-color: clear;
+		height: 0px;
+		left: 0px;
+		position: fixed;
+		top: 0px;
+		width: 0px;
+		z-index: 998;
+	}
+
+	.header-logo a {
+		font-size: 0px;
+		font-weight: 0;
+		text-align: center;
+	}
+
+	.hide-header-logo {
+		background-color: clear;
+		height: 0px;
+		left: 0px;
+		position: absolute;
+		top: 0px;
+		width: 0px;
+		z-index: 999;
+	}
+}
+
 /*Header - Links at the top of the page*/
 .header {
 	background-color: white;
