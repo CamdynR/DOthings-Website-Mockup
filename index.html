@@ -33,13 +33,19 @@
 	<div class="hide-shadow"></div>
 
 	<!-- Collapses links above for smaller screens into small menu -->
-	<a href="https://www.google.com">
-		<div class="menu">
-			<div id="topBar"></div>
-			<div id="middleBar"></div>
-			<div id="bottomBar"></div>
+	<div class="collapsible-menu">
+		<input type="checkbox" id="menu" name="openAndClose" value="menu">
+		<label for="menu">menu</label>
+		<div id="menu-content">
+			<ul>
+				<li><a href="./try_now/try_now.html" class="trynow">TRY NOW</a><li>
+				<li><a href="./try_now/try_now.html" class="pricing">PRICING</a><li>
+				<li><a href="./try_now/try_now.html" class="about">ABOUT</a><li>
+				<li><a href="./login/login.html" class="login">LOGIN</a><li>
+				<li><a href="./sign_up/sign_up.html" class="sign_up">SIGN UP</a><li>
+			</ul>
 		</div>
-	</a>
+	</div>
 
 	<ul class="grid_boxes">
 		<!-- Main DOthings logo -->
@@ -109,5 +115,6 @@
 			<a href="./try_now/try_now.html">© DOthings 2018</a>
 		</li>
 	</ul>
+
 </body>
 </html>
