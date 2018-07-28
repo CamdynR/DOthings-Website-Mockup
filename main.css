@@ -93,33 +93,33 @@ ul {
 	z-index: 998;
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1375px) {
-	.header-logo {
-		background-color: clear;
-		height: 0px;
-		left: 0px;
-		position: fixed;
-		top: 0px;
-		width: 0px;
-		z-index: 998;
-	}
+	@media screen and (min-width: 1025px) and (max-width: 1375px) {
+		.header-logo {
+			background-color: clear;
+			height: 0px;
+			left: 0px;
+			position: fixed;
+			top: 0px;
+			width: 0px;
+			z-index: 998;
+		}
 
-	.header-logo a {
-		font-size: 0px;
-		font-weight: 0;
-		text-align: center;
-	}
+		.header-logo a {
+			font-size: 0px;
+			font-weight: 0;
+			text-align: center;
+		}
 
-	.hide-header-logo {
-		background-color: clear;
-		height: 0px;
-		left: 0px;
-		position: absolute;
-		top: 0px;
-		width: 0px;
-		z-index: 999;
+		.hide-header-logo {
+			background-color: clear;
+			height: 0px;
+			left: 0px;
+			position: absolute;
+			top: 0px;
+			width: 0px;
+			z-index: 999;
+		}
 	}
-}
 
 /*Header - Links at the top of the page*/
 .header {
@@ -201,7 +201,7 @@ a.sign_up:hover {
 
 /*DOthings logo and subtitle*/
 .logo {
-	background-color: white;
+	background-color: clear;
 	grid-area: logo;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -217,6 +217,57 @@ a.sign_up:hover {
 	margin-top: -15px;
 	/* -webkit-animation: image_blur 2s; */
 }
+
+	/*Adjusting the main logo for mobile devices*/
+	@media screen and (max-width: 850px) {
+		.logo h1 {
+			font-size: 8rem;
+		}
+
+		.logo h3 {
+			font-size: 1.75rem;
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		.logo h1 {
+			font-size: 7rem;
+		}
+
+		.logo h3 {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.logo h1 {
+			font-size: 6rem;
+		}
+
+		.logo h3 {
+			font-size: 1.25rem;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		.logo h1 {
+			font-size: 5rem;
+		}
+
+		.logo h3 {
+			font-size: 1rem;
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		.logo h1 {
+			font-size: 4rem;
+		}
+
+		.logo h3 {
+			font-size: 1rem;
+		}
+	}
 
 /*First break - Red bar across page with button*/
 .break1 {
@@ -283,8 +334,10 @@ a.sign_up:hover {
 .box1_left, .box1_right, .box2_left, .box2_right, 
 .box3_left, .box3_right, .footer {
 	background-color: white;
+	/*
 	padding-left: 30px;
-	padding-right: 30px;
+	padding-right: 30px;*/
+	margin: 0 auto;
 }
 
 /*Box 1 Right -> Text about Macbook Picture*/
@@ -293,7 +346,8 @@ a.sign_up:hover {
 }
 
 .box1_right h5, .box2_left h5, .box3_right h5 {
-	margin-left: 110px;
+	margin: 0 auto;
+	background-color: clear;
 	max-width: 70%;
 }
 
@@ -453,221 +507,414 @@ a.sign_up:hover {
 	color: #DB4D52; 
 }
 
-/*Mobile Optimizations*/
-@media screen and (max-width: 1025px), screen and (orientation: portrait) {
-	.menuLogo {
-		background-color: clear;
-		border: 1px solid clear;
-		height: 30px;
-		position: fixed;
-		right: 25px;
-		top: 15px;
-		width: 35px;
-		z-index: 998;
+	/*Optimization top bar for thinner browsers*/
+	@media screen and (max-width: 1025px), screen and (orientation: portrait) {
+		/*Logo in the top left that appears when user scrolls*/
+		.menuLogo {
+			background-color: clear;
+			border: 1px solid clear;
+			height: 30px;
+			position: fixed;
+			right: 25px;
+			top: 15px;
+			width: 35px;
+			z-index: 998;
+		}
+
+		/*Menu triple bar in top right*/
+		#menu {
+			background: url(./images/menu_button.png);
+			background-position: 0px; 
+	  	  	background-repeat: no-repeat;
+	   		background-size: 30px 30px;
+			border: 0px;
+			color: black;
+			height: 30px;
+			position: fixed;
+			right: 20px;
+			top: 13px;
+			transition-duration: 0.4s;
+			width: 30px;
+			z-index: 1000;
+			-webkit-appearance: none;
+			-webkit-transition-duration: 0.4s;
+		}
+
+		#menu:hover {
+			background: url(./images/menu_button_hover.png);
+			background-position: 0px; 
+	  	  	background-repeat: no-repeat;
+	   		background-size: 30px 30px;
+		}
+
+		#menu:focus {
+			outline: none;
+		}
+
+		#menu:unchecked {
+			background-color: clear;
+		}
+
+		#menu:checked {
+			background: url(./images/menu_button_hover.png);
+			background-color: clear;
+			background-position: 0px; 
+	  	  	background-repeat: no-repeat;
+	   		background-size: 30px 30px;
+			margin-bottom: 400px;
+		}
+
+		/*Links that pop down*/
+		#menu-content {
+			background-color: white;
+			margin-top: 36px;
+			max-height: 0;
+			overflow: hidden;
+			padding: 0 0 0 50px;
+			position: fixed;
+			width: 100%;
+			z-index: 1001;
+		}
+
+		#menu-content ul {
+			list-style-type: none;
+			float: right;
+	    	padding: 0;
+	    	position: relative;
+	    	margin-right: 60px;
+		}
+
+		/*CSS Magic, menu pops down when menu button is clicked without JS*/
+		input:checked ~ #menu-content {
+		    max-height: 100%;
+		    box-shadow: 0px 10px 18px -8px #808080;
+		}
+
+		#menu-content a {
+	    	background-color: white;
+			border: 2px solid white;
+			border-radius: 10px;
+			color: #a6a6a6;
+			display: block;
+			font-family: 'Nanum Gothic', sans-serif;
+			font-size: 1.25rem;
+			margin-top: 0px;
+			margin-bottom: 12px;
+			padding-bottom: 8px;
+			padding-left: 20px;
+			padding-right: 8px;
+			padding-top: 8px;
+			text-align: right;
+			text-decoration: none;
+			transition-duration: 0.4s;
+			width: 100px;
+			-webkit-transition-duration: 0.4s;
+		}
+
+		#menu-content a:hover {
+			background-color: #808080;
+			border-color: #808080;
+			color: white;
+			cursor: pointer;
+		}
+
+		#menu-content a.trynow {
+			margin-top: 12px;
+		}
+
+		#menu-content a.login {
+			border: 2px solid #e99598;
+			color: #e99598;
+		}
+
+		#menu-content a.login:hover {
+			background-color: #DB4D52;
+			border-color: #DB4D52;
+			color: white;
+		}
+
+		#menu-content a.sign_up {
+			background-color: #e99598;
+			border: 2px solid #e99598;
+			color: white;
+			margin-bottom: 20px;
+		}
+
+		#menu-content a.sign_up:hover {
+			background-color: #DB4D52;
+			border-color: #DB4D52;
+			color: white;
+		}
+
+		.header-background {
+			background-color: white;
+			filter: drop-shadow(0px 0px 6px #666);
+			height: 55px;
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			z-index: 990;
+			-webkit-filter: drop-shadow(0px 0px 6px #666);
+		}
+
+		.hide-shadow {
+			background-color: white;
+			height: 18px;
+			position: absolute;
+			top: 50px;
+			width: 100%;
+			z-index: 991;
+		}
+
+		.header {
+			background-color: white;
+			margin-top: 0px;
+			text-align: center;
+			z-index: 0;
+		}
+
+		/*"Hides" the desktop links when menu button appears*/
+		.header a {
+			border: 0px solid white;
+			border-radius: 0px;
+			font-size: 0rem;
+			padding-bottom: 0px;
+			padding-left: 0px;
+			padding-right: 0px;
+			padding-top: 0px;
+		}
+
+		a.login {
+			border: 0px solid clear;
+		}
+
+		a.sign_up {
+			border: 0px solid clear;
+		}
+
+		/*Organizing Page Vertically by adjusting the grid*/
+		.grid_boxes{
+			display: grid;
+			grid-template: 800px 150px 500px 400px 150px 500px 400px 150px 500px 400px 100px / 1fr;
+			grid-template-areas: "logo"
+								 "break1"
+								 "box1Left"
+								 "box1Right"
+								 "break2"
+								 "box2Right"
+								 "box2Left"
+								 "break3"
+								 "box3Left"
+								 "box3Right"
+								 "footer"; 
+			justify-content: center;
+			padding-bottom: 15px;
+		}
+
+		.box1_left #macbook {
+			width: 80%;
+			margin-left: 9%;
+		}
+
+		.box2_right #chart {
+			filter: drop-shadow(0px 0px 15px #333);
+			width: 80%;
+			margin-left: 13%;
+			-webkit-filter: drop-shadow(0px 0px 15px #333);
+		}
+
+		.box3_left #apple_devices {
+			width: 80%;
+			margin-left: 9%;
+		}
 	}
 
-	#menu {
-		background: url(./images/menu_button.png);
-		background-position: 0px; 
-  	  	background-repeat: no-repeat;
-   		background-size: 30px 30px;
-		border: 0px;
-		color: black;
-		height: 30px;
-		position: fixed;
-		right: 20px;
-		top: 13px;
-		transition-duration: 0.4s;
-		width: 30px;
-		z-index: 1000;
-		-webkit-appearance: none;
-		-webkit-transition-duration: 0.4s;
-	}
+	@media screen and (min-height: 1000px) and screen and (max-width: 1025){
+		/*Logo in the top left that appears when user scrolls*/
+		.menuLogo {
+			background-color: clear;
+			border: 1px solid clear;
+			height: 30px;
+			position: fixed;
+			right: 25px;
+			top: 15px;
+			width: 35px;
+			z-index: 998;
+		}
 
-	#menu:hover {
-		background: url(./images/menu_button_hover.png);
-		background-position: 0px; 
-  	  	background-repeat: no-repeat;
-   		background-size: 30px 30px;
-	}
+		/*Menu triple bar in top right*/
+		#menu {
+			background: url(./images/menu_button.png);
+			background-position: 0px; 
+	  	  	background-repeat: no-repeat;
+	   		background-size: 60px 60px; /*30px 30px;*/
+			border: 0px;
+			color: black;
+			height: 60px; /*30px;*/
+			position: fixed;
+			right: 20px;
+			top: 13px;
+			transition-duration: 0.4s;
+			width: 60px; /*30px;*/
+			z-index: 1000;
+			-webkit-appearance: none;
+			-webkit-transition-duration: 0.4s;
+		}
 
-	#menu:focus {
-		outline: none;
-	}
+		#menu:hover {
+			background: url(./images/menu_button_hover.png);
+			background-position: 0px; 
+	  	  	background-repeat: no-repeat;
+	   		background-size: 60px 60px; /*30px 30px;*/
+		}
 
-	#menu:unchecked {
-		background-color: clear;
-	}
+		#menu:focus {
+			outline: none;
+		}
 
-	#menu:checked {
-		background: url(./images/menu_button_hover.png);
-		background-color: clear;
-		background-position: 0px; 
-  	  	background-repeat: no-repeat;
-   		background-size: 30px 30px;
-		margin-bottom: 400px;
-	}
+		#menu:unchecked {
+			background-color: clear;
+		}
 
-	#menu-content ul {
-		list-style-type: none;
-		float: right;
-    	padding: 0;
-    	position: relative;
-    	margin-right: 60px;
-	}
+		#menu:checked {
+			background: url(./images/menu_button_hover.png);
+			background-color: clear;
+			background-position: 0px; 
+	  	  	background-repeat: no-repeat;
+	   		background-size: 60px 60px; /*30px 30px;*/
+			margin-bottom: 400px;
+		}
 
-	#menu-content {
-		background-color: white;
-		margin-top: 36px;
-		max-height: 0;
-		overflow: hidden;
-		padding: 0 0 0 50px;
-		position: fixed;
-		width: 100%;
-		z-index: 1001;
-	}
+		/*Links that pop down*/
+		#menu-content {
+			background-color: white;
+			margin-top: 60px; /*36px;*/
+			max-height: 0;
+			overflow: hidden;
+			padding: 0 0 0 50px;
+			position: fixed;
+			width: 100%;
+			z-index: 1001;
+		}
 
-	input:checked ~ #menu-content {
-	    max-height: 100%;
-	    box-shadow: 0px 10px 18px -8px #808080;
-	    /*
- 		filter: drop-shadow(0px 0px 6px #666);
- 		-webkit-filter: drop-shadow(0px 0px 6px #666);
- 		*/
-	}
+		#menu-content ul {
+			list-style-type: none;
+			float: right;
+	    	padding: 0;
+	    	position: relative;
+	    	margin-right: 60px;
+		}
 
-	#menu-content a {
-    	background-color: white;
-		border: 2px solid white;
-		border-radius: 10px;
-		color: #a6a6a6;
-		display: block;
-		font-family: 'Nanum Gothic', sans-serif;
-		font-size: 1.25rem;
-		margin-top: 0px;
-		margin-bottom: 12px;
-		padding-bottom: 8px;
-		padding-left: 20px;
-		padding-right: 8px;
-		padding-top: 8px;
-		text-align: right;
-		text-decoration: none;
-		transition-duration: 0.4s;
-		width: 100px;
-		-webkit-transition-duration: 0.4s;
-	}
+		/*CSS Magic, menu pops down when menu button is clicked without JS*/
+		input:checked ~ #menu-content {
+		    max-height: 100%;
+		    box-shadow: 0px 10px 18px -8px #808080;
+		}
 
-	#menu-content a:hover {
-		background-color: #808080;
-		border-color: #808080;
-		color: white;
-		cursor: pointer;
-	}
+		#menu-content a {
+	    	background-color: white;
+			border: 2px solid white;
+			border-radius: 10px;
+			color: #a6a6a6;
+			display: block;
+			font-family: 'Nanum Gothic', sans-serif;
+			font-size: 2rem; /*1.25rem;*/
+			margin-top: 0px;
+			margin-bottom: 12px;
+			padding-bottom: 8px;
+			padding-left: 20px;
+			padding-right: 8px;
+			padding-top: 8px;
+			text-align: right;
+			text-decoration: none;
+			transition-duration: 0.4s;
+			width: 160px; /*100px;*/
+			-webkit-transition-duration: 0.4s;
+		}
 
-	#menu-content a.trynow {
-		margin-top: 12px;
-	}
+		#menu-content a:hover {
+			background-color: #808080;
+			border-color: #808080;
+			color: white;
+			cursor: pointer;
+		}
 
-	#menu-content a.login {
-		border: 2px solid #e99598;
-		color: #e99598;
-		/*text-align: center;*/
-	}
+		#menu-content a.trynow {
+			margin-top: 12px;
+		}
 
-	#menu-content a.login:hover {
-		background-color: #DB4D52;
-		border-color: #DB4D52;
-		color: white;
-	}
+		#menu-content a.login {
+			border: 2px solid #e99598;
+			color: #e99598;
+			/*text-align: center;*/
+		}
 
-	#menu-content a.sign_up {
-		background-color: #e99598;
-		border: 2px solid #e99598;
-		color: white;
-		margin-bottom: 20px;
-		/*text-align: center;*/
-	}
+		#menu-content a.login:hover {
+			background-color: #DB4D52;
+			border-color: #DB4D52;
+			color: white;
+		}
 
-	#menu-content a.sign_up:hover {
-		background-color: #DB4D52;
-		border-color: #DB4D52;
-		color: white;
-	}
+		#menu-content a.sign_up {
+			background-color: #e99598;
+			border: 2px solid #e99598;
+			color: white;
+			margin-bottom: 20px;
+		}
 
-	/*Links*/
-	.header-background {
-		background-color: white;
-		filter: drop-shadow(0px 0px 6px #666);
-		height: 55px;
-		position: fixed;
-		top: 0px;
-		width: 100%;
-		z-index: 990;
-		-webkit-filter: drop-shadow(0px 0px 6px #666);
-	}
+		#menu-content a.sign_up:hover {
+			background-color: #DB4D52;
+			border-color: #DB4D52;
+			color: white;
+		}
 
-	.hide-shadow {
-		background-color: white;
-		height: 18px;
-		position: absolute;
-		top: 50px;
-		width: 100%;
-		z-index: 991;
-	}
+		.header-background {
+			background-color: white;
+			filter: drop-shadow(0px 0px 6px #666);
+			height: 90px; /*55px;*/
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			z-index: 990;
+			-webkit-filter: drop-shadow(0px 0px 6px #666);
+		}
 
-	.header {
-		background-color: white;
-		margin-top: 0px;
-		text-align: center;
-		z-index: 0;
-	}
+		.hide-shadow {
+			background-color: white;
+			height: 18px;
+			position: absolute;
+			top: 85px; /*50px;*/
+			width: 100%;
+			z-index: 991;
+		}
 
-	.header a {
-		border: 0px solid white;
-		border-radius: 0px;
-		color: white;
-		font-family: 'Nanum Gothic', sans-serif;
-		font-size: 0rem;
-		padding-bottom: 0px;
-		padding-left: 0px;
-		padding-right: 0px;
-		padding-top: 0px;
-		text-align: center;
-		transition-duration: 0.4s;
-		-webkit-transition-duration: 0.4s;
-	}
+		.header {
+			background-color: white;
+			margin-top: 0px;
+			text-align: center;
+			z-index: 0;
+		}
 
-	.header a:hover{
-		background-color: white;
-		border-color: white;
-		color: white;
-		cursor: pointer;
-	}
+		/*"Hides" the desktop links when menu button appears*/
+		.header a {
+			border: 0px solid white;
+			border-radius: 0px;
+			font-size: 0rem;
+			padding-bottom: 0px;
+			padding-left: 0px;
+			padding-right: 0px;
+			padding-top: 0px;
+		}
 
-	a.login {
-		border: 0px solid white;
-		color: white;
-	}
+		a.login {
+			border: 0px solid clear;
+		}
 
-	a.login:hover {
-		background-color: white;
-		border-color: white;
-		color: white;
+		a.sign_up {
+			border: 0px solid clear;
+		}
 	}
-
-	a.sign_up {
-		background-color: white;
-		border: 0px solid white;
-		color: white;
-	}
-
-	a.sign_up:hover {
-		background-color: white;
-		border-color: white;
-		color: white;
-	}
-}
-
+	
 /* Animations - Decided not to use these, might use them later
 @-webkit-keyframes image_blur {
     0% { -webkit-filter: blur(10px);}
